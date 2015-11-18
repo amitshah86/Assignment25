@@ -29007,6 +29007,27 @@ var _servicesFormService2 = _interopRequireDefault(_servicesFormService);
 
 _angular2['default'].module('app', ['ui-router']).config(_config2['default']).constant('PARSE', _constantsParseConstant2['default']).controller('HomeController', _controllersHomeController2['default']).service('FormService', _servicesFormService2['default']);
 
+var vm = undefined;
+
+vm.addContact = addContact;
+
+function addContact(contactObj) {}
+
+function validateEmpty(field) {
+  return field ? true : false;
+}
+
+function validateEmail(field) {
+  return field.indexOf('@') >= 0 ? true : false;
+}
+
+function validateWebsite(field) {
+  var pattern = /^https?:\/\//i;
+  return pattern.test(field);
+}
+
+;
+
 },{"./config":3,"./constants/parse.constant":4,"./controllers/home.controller":5,"./services/form.service":7,"angular":2,"angular-ui-router":8}],7:[function(require,module,exports){
 'use strict';
 

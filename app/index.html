@@ -6,6 +6,14 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+
+<form ng-submit="vm.addContact(contact)">
+  <input placeholder="Name" ng-model="form.name">
+  <input placeholder="Email" ng-model="form.email">
+  <input placeholder="Website" ng-model="form.website">
+  <input placeholder="Message" ng-model="form.message">
+  <button>Submit</button>
+</form>
   
   <div class="wrapper" ui-view></div>
   
